@@ -1,0 +1,50 @@
+prd.md
+Ürün Gereksinim Belgesi (PRD): StatLift
+1. Genel Bakış
+StatLift, serbest ağırlık ve direnç antrenmanı yapan sporcular için geliştirilmiş, "ekransız (hands-free)" çalışan yapay zeka destekli bir form analisti web uygulamasıdır. Temel amacı, kullanıcının hareket formunu telefon kamerasından anlık olarak analiz etmek, antrenman akışını bozmadan doğrudan kulaklığa sesli geri bildirimler vermek ve set sonlarında gelişimi takip etmek için istatistiksel bir "Form Skoru" sunmaktır.
+
+2. Hedef Kullanıcı
+Spor salonunda ağırlık antrenmanı yapan, sakatlanma riskini minimize etmek ve zaman içinde hareket formunu mükemmelleştirdiğini verilerle görmek isteyen sporcular.
+
+3. Temel Özellikler (MVP - İlk Sürüm)
+Kamera Erişimi ve Görüntü Yakalama: Kullanıcının telefon kamerasını açıp hareketi (örneğin squat) kaydetmesini sağlayan basit bir arayüz.
+
+Yapay Zeka Görsel Analizi: Gemini Vision API kullanılarak kameradan gelen görüntülerin analiz edilmesi ve form hatalarının (örn. "sırt eğik") tespit edilmesi.
+
+Sesli Geri Bildirim (Text-to-Speech): Yapay zekanın ürettiği form düzeltme metinlerinin, antrenman anında sese dönüştürülerek kullanıcıya okunması.
+
+Form Skoru ve Tarihçe: Set bittiğinde yapay zekanın genel forma 100 üzerinden bir puan vermesi ve önceki skorlarla birlikte basit bir grafik/liste halinde ekranda gösterilmesi.
+
+4. Kullanıcı Akışı (User Flow)
+Kullanıcı StatLift web uygulamasını açar.
+
+Ekranda kamerasını görür ve telefonu kendisini çekecek bir açıya yerleştirir.
+
+"Antrenmana Başla" butonuna basar ve setine başlar.
+
+Hareket sırasında formunu bozarsa, uygulama anında sesli olarak uyarır (Örn: "Dizlerini içe bükme").
+
+Kullanıcı setini bitirip "Seti Bitir" butonuna basar.
+
+Ekranda o setin "Form Skoru" (Örn: 85/100) ve geçmiş günlerin skor trendi belirir.
+
+5. Ekran Tasarımı (Frontend)
+Uygulama karmaşadan uzak, tek bir ana ekrandan oluşacaktır:
+
+Üst Kısım: Geçmiş form skorlarının istatistiksel trendini gösteren basit bir çubuk grafik veya liste.
+
+Orta Kısım: Canlı kamera görüntüsü.
+
+Alt Kısım: Büyük ve kolay basılabilir bir "Başla / Bitir" butonu.
+
+Tema: Odaklanmayı artıracak, göz yormayan karanlık (dark mode) bir tasarım ve minimalist metinler.
+
+6. Kullanılacak Teknolojiler (Tech Stack)
+Frontend: HTML, CSS, JavaScript (Basit ve hızlı olması için).
+
+Yapay Zeka: Görüntü analizi ve metin üretimi için Google Gemini API.
+
+Seslendirme: Tarayıcının kendi yerleşik Web Speech API'si (Ekstra kurulum gerektirmez).
+
+
+Yayınlama: Saniyeler içinde canlıya almak için Lovable.
