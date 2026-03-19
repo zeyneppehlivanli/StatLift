@@ -1,0 +1,40 @@
+tasks.md
+Görev 1: Temel Arayüzü (UI) Oluştur
+
+index.html, style.css ve app.js dosyalarını oluştur.
+
+Ekrana kameranın yansıyacağı bir video alanı (görüntü kutusu) ekle.
+
+Alt kısma rahat basılabilir, büyük bir "Antrenmana Başla" ve "Seti Bitir" butonu ekle.
+
+Üst kısma "Son Set Skoru" ve geçmiş istatistikler için boş bir alan ekle.
+
+Spor salonuna uygun, göz yormayan karanlık (dark mode) bir tema uygula.
+
+Görev 2: Kamera Erişimini Sağla
+
+JavaScript kullanarak cihazın kamerasından erişim izni iste.
+
+İzin verilince, canlı video akışını ekrandaki görüntü kutusuna yansıt.
+
+Görev 3: Gemini Vision API ile Görsel Analiz Bağlantısı
+
+Google AI Studio API anahtarı için yapılandırmayı hazırla.
+
+"Antrenmana Başla" butonuna basıldığında, videodan 3-4 saniyede bir fotoğraf karesi (frame) alarak Gemini API'ye gönder.
+
+Gemini'ye şu sistem komutunu ver: "Kullanıcının ağırlık antrenmanı formunu incele. Eğer kritik bir form hatası varsa çok kısa, tek cümlelik bir düzeltme metni yaz (Örn: 'Sırtını dikleştir'). Sorun yoksa boş dön."
+
+Görev 4: Sesli Geri Bildirim (Text-to-Speech) Entegrasyonu
+
+Tarayıcının yerleşik Web Speech API'sini kullanarak sesli okuma özelliğini aktif et.
+
+Gemini'den dönen metinleri anında okutarak doğrudan kullanıcının kulaklığına/hoparlörüne ilet.
+
+Görev 5: Form Skoru ve İstatistik Takibi
+
+"Seti Bitir" butonuna basıldığında, tüm setin genel değerlendirmesi için Gemini'den 1-100 arası bir "Form Skoru" üretmesini iste.
+
+Çıkan bu puanı ekranda büyük bir şekilde göster.
+
+Bu skoru tarayıcı hafızasına (Local Storage) kaydederek geçmiş setlerin puanlarını basit bir liste halinde ana ekranda listele.
