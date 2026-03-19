@@ -1,0 +1,15 @@
+user-flow.md
+
+StatLift - Kullanıcı Akışı 
+
+Giriş ve İzinler: Kullanıcı StatLift web uygulamasını açar. Ekranda karanlık temalı (dark mode) sade bir arayüzle karşılaşır. Uygulama, cihazın kamerasına erişim izni ister.
+
+Hazırlık: Kamera açıldığında kullanıcı kendini ekranda görür, telefonu uygun bir açıya yerleştirir.
+
+Sete Başlama: Ekranda büyük ve belirgin olan "Antrenmana Başla" butonuna basar ve ağırlık setine girer.
+
+Gerçek Zamanlı Sesli Uyarı (AI Devrede): Kullanıcı hareketi yaparken arka planda Gemini Vision API görüntüleri işler. Kullanıcı formunu bozduğunda (örn: beli büküldüğünde) uygulama antrenmanı hiç bölmeden kulaklıktan sesli olarak "Sırtını dik tut" der. Form doğruysa sessiz kalır.
+
+Seti Bitirme: Set bittiğinde kullanıcı "Seti Bitir" butonuna basar.
+
+İstatistik ve Sonuç: Yapay zeka tüm seti değerlendirir ve ekranda o setin "Form Skoru" (Örn: 82/100) belirir. Alt kısımda ise kullanıcının geçmiş günlerdeki form gelişimi basit bir liste olarak gösterilir.
