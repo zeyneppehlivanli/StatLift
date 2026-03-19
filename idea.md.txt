@@ -1,0 +1,13 @@
+idea.md
+Problem: Ağırlık ve direnç antrenmanı yapan sporcuların, hareketleri (squat, deadlift vb.) yaparken formlarını dışarıdan görememesi. Yanlış form sakatlıklara yol açıyor ancak geri bildirim almak için sürekli telefon ekranına bakmak da hareketin akışını ve odağını bozuyor.
+
+
+Kullanıcı: Spor salonunda ağırlık antrenmanı yapan, sakatlık riskini azaltmak ve zaman içinde hareket formunu mükemmelleştirmek isteyen sporcular.
+
+AI'ın Rolü: Telefon kamerasından kullanıcının hareketini anlık olarak görsel açıdan analiz eder. Kullanıcıya ekrana bakmasına gerek kalmadan, doğrudan kulaklık üzerinden sesli komutlarla ("Sırtını biraz daha dik tut", "Daha yavaş in") geri bildirim verir. Ayrıca set bitiminde hareket formuna 100 üzerinden istatistiksel bir "Form Skoru" vererek gelişimi kaydeder.
+
+
+Rakip Durum: Gymscore ve benzeri güçlü rakipler var, ancak çok fazla karmaşık veri sunuyorlar ve ekrana bakmayı gerektiriyorlar. Bizim çözümümüz tamamen "ekransız (hands-free)" bir sesli asistan olması ve çok sade bir arayüzle form skorunun istatistiksel trendini göstermesiyle rakiplerinden ayrışıyor.
+
+
+Başarı Kriteri: Kullanıcının, antrenman sırasında telefona hiç dokunmadan sadece sesi dinleyerek doğru formda bir seti tamamlaması ve set sonunda form skorunu geçmiş verileriyle karşılaştırmalı olarak görebilmesi.
